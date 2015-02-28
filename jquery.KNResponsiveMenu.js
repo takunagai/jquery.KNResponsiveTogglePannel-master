@@ -31,19 +31,24 @@
 		}
 
 		if ('ontouchstart' in window){
-			var touchX, touchX2 = 0;
-			var touchY, touchY2 = 0;
+			var startX ,startY, endX, endY;
 			$(this).bind('touchstart', function(){
-				touchX = event.changedTouches[0].pageX;
-				touchY = event.changedTouches[0].pageY;
+				startX = 0;
+				startY = 0;
+				startX = event.changedTouches[0].pageX;
+				startY = event.changedTouches[0].pageY;
 			});
 			$(this).bind('touchend', function(){
-				touchX2 = event.changedTouches[0].pageX;
-				touchY2 = event.changedTouches[0].pageY;
-				if ( touchX != touchX2 || touchY != touchY2 ) {
+				endX = event.changedTouches[0].pageX;
+				endY = event.changedTouches[0].pageY;
+				var xxx = endX - startX;
+				var yyy = endX - startY;
+				if ( Math.abs(xxx) > 5 || Math.abd(yyy) > 5 ) {
 					return;
 				}
 				KNToggleMenu($(this), setting.position);
+				endX = 0;
+				endY = 0;
 			});		
 		} else {
 			$(this).click( function() {
