@@ -39,7 +39,7 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ## オプション（Options）
 
-(2)の手順「jquery.KNResponsiveMenuの初期設定」で記述したコードでは、初期設定としてセレクタの次の要素を開閉できるようになります。セレクタの次の要素以外に、セレクタの前の要素、セレクタの小要素を開閉できるオプションを用意しています。
+(2)の手順「jquery.KNResponsiveMenuの初期設定」で記述したコードでは、初期設定としてセレクタの次の要素を開閉できるようになります。セレクタの次の要素以外に、セレクタの前の要素、セレクタの子要素を開閉できるオプションを用意しています。
 
 ### 前の要素を開閉する
 
@@ -48,7 +48,7 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 	<script>
 		$(function(){
 			$(".neko_next").KNResponsiveMenu({
-				// 前の要素を開閉にする
+				// 前の要素を開閉する
 				position : 'prev'
 			});
 		});
@@ -74,7 +74,7 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 	<script>
 		$(function(){
 			$(".neko_next").KNResponsiveMenu({
-				// 子要素を開閉にする
+				// 子要素を開閉する
 				position : 'children'
 			});
 		});
