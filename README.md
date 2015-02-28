@@ -105,5 +105,5 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 次のURLではDemoページをご用意しております。複数設置やリストの段階式な開閉についても実現しています。参考程度にご覧ください。
 
-jquery.KNResponsiveMenu Demo  
-[http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html](http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html)
+jquery.KNResponsiveMenu Demo
+<a href="http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html" target="_blank">http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html</a>
