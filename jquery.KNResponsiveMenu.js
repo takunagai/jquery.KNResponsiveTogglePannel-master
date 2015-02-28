@@ -1,11 +1,13 @@
 $(function(){
 	if ('ontouchstart' in window){
-		$('.menuButton').bind('touchstart', function(e){
-			$(this).next().slideToggle();
-			e.preventDefault();
+		$('.menuButton').bind('touchstart', function(){
+			$(this).toggleClass('menuButtonAnimation');
+			$(this).next().slideToggle('fast');
 		});
 	} else {
 		$('.menuButton').click( function() {
+			$(this).toggleClass('menuButtonAnimation');
+			$(this).next().slideToggle('fast');
 		});
 	}
 });
