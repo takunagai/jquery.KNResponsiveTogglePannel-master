@@ -13,7 +13,7 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ### (2) jquery.KNResponsiveMenuの初期設定
 
-(1)のコードの次に続けて下記のコードを記述します。$(".neko_next")の部分（セレクタ部分）は好きなID名、クラス名で問題ありません。
+(1)のコードの次に続けて下記のコードを記述します。$(".neko_next")の部分（セレクタ部分）は好きなID名、クラス名にする事ができます。
 
 	<script>
 		$(function(){
@@ -65,7 +65,7 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 	</ul>
 	<div class="neko_prev">click</div>
 
-上記のコードの例では、クラス neko_prev の前の要素 ul が開閉できるようになります。
+上記のコードの例では、クラス neko_prev の前の要素 \<ul>〜\</ul> が開閉できるようになります。
 
 ### 子要素を開閉する
 
@@ -99,10 +99,11 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 		<li>ccc</li>
 	</ul>
 
-上記のコードの例では、クラス neko_child の子要素 \<ul>〜\</ul>が開閉できるようになります。
+上記のコードの例では、クラス neko_child の子要素 \<ul>〜\</ul> が開閉できるようになります。
 
 ### 複数設置 
 
 次のURLではDemoページをご用意しております。複数設置やリストの段階式な開閉についても実現しています。参考程度にご覧ください。
 
 jquery.KNResponsiveMenu Demo
+[http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html](http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html)
