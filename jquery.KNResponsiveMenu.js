@@ -42,13 +42,17 @@
 				endX = event.changedTouches[0].pageX;
 				endY = event.changedTouches[0].pageY;
 				var xxx = endX - startX;
-				var yyy = endX - startY;
-				if ( Math.abs(xxx) > 5 || Math.abd(yyy) > 5 ) {
+				var yyy = endY - startY;
+				if ( Math.abs(xxx) > 5 ) {
 					return;
 				}
-				KNToggleMenu($(this), setting.position);
+				if ( Math.abs(yyy) > 5 ) {
+					return;
+				}
 				endX = 0;
 				endY = 0;
+				
+				KNToggleMenu($(this), setting.position);
 			});		
 		} else {
 			$(this).click( function() {
