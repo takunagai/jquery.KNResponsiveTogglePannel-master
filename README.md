@@ -48,7 +48,6 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 	<script>
 		$(function(){
 			$(".neko_next").KNResponsiveMenu({
-				// 前の要素を開閉する
 				position : 'prev'
 			});
 		});
@@ -74,7 +73,6 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 	<script>
 		$(function(){
 			$(".neko_next").KNResponsiveMenu({
-				// 子要素を開閉する
 				position : 'children'
 			});
 		});
@@ -101,9 +99,63 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 上記のコードの例では、クラス neko_child の子要素 \<ul>〜\</ul> が開閉できるようになります。
 
+### ボタン要素にテキスト（文字）を設定
+
+#### jquery.KNResponsiveMenuの初期設定
+
+	<script>
+		$(function(){
+			$(".neko_label").KNResponsiveMenu({
+				closeLabel : '閉める',
+				openLabel : '開く'
+			});
+		});
+	</script>
+
+#### HTML記述例
+
+	<div class="button neko_label">click</div>
+	<ul>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+	</ul>
+
+上記のコードの例では、クラス neko_label の要素 click が「開く」に変わります。クリックして開いた時には「閉じる」となります。オプション値である closeLabel , openLabel を使用する場合はセレクタの中の要素は上書きされます。
+
+### ボタン要素に画像を設定
+
+#### jquery.KNResponsiveMenuの初期設定
+
+	<script>
+		$(function(){
+			$(".neko_labelImg").KNResponsiveMenu({
+				closeLabel : '<img src="close.png">',
+				openLabel : '<img src="open.png">'
+			});
+		});
+	</script>
+
+#### HTML記述例
+
+	<div class="button neko_labelImg"></div>
+	<ul>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+	</ul>
+
+オプション値である closeLabel , openLabel にimg要素（HTMLタグ）を記述する事で画像を使用する事もできます。
+
 ### Demo
 
-次のURLではDemoページをご用意しております。複数設置やリストの段階式な開閉についても実現しています。参考程度にご覧ください。
+次のURLではDemoページをご用意しております。複数設置、リストの段階式な開閉、画像ボタンなども実現しています。参考程度にご覧ください。
 
 jquery.KNResponsiveMenu Demo  
 [http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html](http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html)

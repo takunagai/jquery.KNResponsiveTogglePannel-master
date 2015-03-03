@@ -3,7 +3,9 @@
         
         // setup options
         var defaults = {
-            position : 'next'
+            position : 'next',
+            closeLabel : '', 
+            openLabel : ''
         };
         var setting = $.extend(defaults, options);
         
@@ -15,16 +17,29 @@
 	       $(this).children().hide();
         }
         
+        if (setting.openLabel.length > 0) {
+	        $(this).html(setting.openLabel);
+        }
+        
+        function updateLabel(element) {
+	        if ( element.html() == setting.closeLabel && setting.closeLabel.length > 0 ) {
+		        element.html(setting.openLabel);
+	        } else if ( element.html() == setting.openLabel && setting.openLabel.length > 0 ) {
+		        element.html(setting.closeLabel);
+	        } else {
+	        }
+        }
+        
         function KNToggleMenu(element, position) {
 			switch (position){
 				case 'next':
-					element.next().slideToggle('fast');
+					element.next().slideToggle('fast', updateLabel(element));
 					break;
 				case 'prev':
-					element.prev().slideToggle('fast');
+					element.prev().slideToggle('fast', updateLabel(element));
 					break;
 				case 'children':
-					element.children().slideToggle('fast');
+					element.children().slideToggle('fast', updateLabel(element));
 				default:
 					break;
 			}
