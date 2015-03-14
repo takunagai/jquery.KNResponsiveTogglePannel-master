@@ -1,23 +1,23 @@
-# JQuery.KNResponsiveMenu
+# JQuery.KNResponsiveTogglePanel
 
 PCのクリック操作、スマホのタッチ操作、どちらでも快適に動作する開閉メニューを作りたくて自作してみました。JQueryのプラグインとして提供していますのでご自由にご利用ください。
 
 ## 設置方法
 
-### (1) jQueryとjquery.KNResponsiveMenu.jsを読み込む
+### (1) jQueryとjquery.KNResponsiveTogglePanel.jsを読み込む
 
-jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクトリにコピーしてください（jqueryは公式のサイトよりダウンロードしてください）。その後、HTMLのhead内にJQueryとjquery.KNResponsiveMenu.jsを読み込みます。
+jquery.KNResponsiveTogglePanel.jsをダウンロードして、任意のディレクトリにコピーしてください（jqueryは公式のサイトよりダウンロードしてください）。その後、HTMLのhead内にJQueryとjquery.KNResponsiveTogglePanel.jsを読み込みます。
 
 	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.KNResponsiveMenu.js"></script>
+	<script type="text/javascript" src="js/jquery.KNResponsiveTogglePanel.js"></script>
 
-### (2) jquery.KNResponsiveMenuの初期設定
+### (2) jquery.KNResponsiveTogglePanelの初期設定
 
 (1)のコードの次に続けて下記のコードを記述します。$(".neko_next")の部分（セレクタ部分）は好きなID名、クラス名にする事ができます。
 
 	<script>
 		$(function(){
-			$(".neko_next").KNResponsiveMenu();
+			$(".neko_next").KNResponsiveTogglePanel();
 		});
 	</script>
 
@@ -39,15 +39,15 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ## オプション（Options）
 
-(2)の手順「jquery.KNResponsiveMenuの初期設定」で記述したコードでは、初期設定としてセレクタの次の要素を開閉できるようになります。セレクタの次の要素以外に、セレクタの前の要素、セレクタの子要素を開閉できるオプションを用意しています。
+(2)の手順「jquery.KNResponsiveTogglePanelの初期設定」で記述したコードでは、初期設定としてセレクタの次の要素を開閉できるようになります。セレクタの次の要素以外に、セレクタの前の要素、セレクタの子要素を開閉できるオプションを用意しています。
 
 ### 前の要素を開閉する
 
-#### jquery.KNResponsiveMenuの初期設定
+#### jquery.KNResponsiveTogglePanelの初期設定
 
 	<script>
 		$(function(){
-			$(".neko_next").KNResponsiveMenu({
+			$(".neko_next").KNResponsiveTogglePanel({
 				position : 'prev'
 			});
 		});
@@ -68,11 +68,11 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ### 子要素を開閉する
 
-#### jquery.KNResponsiveMenuの初期設定
+#### jquery.KNResponsiveTogglePanelの初期設定
 
 	<script>
 		$(function(){
-			$(".neko_next").KNResponsiveMenu({
+			$(".neko_next").KNResponsiveTogglePanel({
 				position : 'children'
 			});
 		});
@@ -101,11 +101,11 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ### ボタン要素にテキスト（文字）を設定
 
-#### jquery.KNResponsiveMenuの初期設定
+#### jquery.KNResponsiveTogglePanelの初期設定
 
 	<script>
 		$(function(){
-			$(".neko_label").KNResponsiveMenu({
+			$(".neko_label").KNResponsiveTogglePanel({
 				closeLabel : '閉める',
 				openLabel : '開く'
 			});
@@ -128,11 +128,11 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 ### ボタン要素に画像を設定
 
-#### jquery.KNResponsiveMenuの初期設定
+#### jquery.KNResponsiveTogglePanelの初期設定
 
 	<script>
 		$(function(){
-			$(".neko_labelImg").KNResponsiveMenu({
+			$(".neko_labelImg").KNResponsiveTogglePanel({
 				closeLabel : '<img src="close.png">',
 				openLabel : '<img src="open.png">'
 			});
@@ -157,5 +157,5 @@ jquery.KNResponsiveMenu.jsをダウンロードして、任意のディレクト
 
 次のURLではDemoページをご用意しております。複数設置、リストの段階式な開閉、画像ボタンなども実現しています。参考程度にご覧ください。
 
-jquery.KNResponsiveMenu Demo  
-[http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html](http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveMenu-master/sample.html)
+jquery.KNResponsiveTogglePanel Demo  
+[http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveTogglePanel-master/sample.html](http://www.chara-de-nakata.com/dl/js/jquery.KNResponsiveTogglePanel-master/sample.html)

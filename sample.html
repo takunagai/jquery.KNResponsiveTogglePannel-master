@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jquery.KNResponsiveMenu Demo</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.KNResponsiveTogglePanel.min.js"></script>
+	<script>
+		$(function(){
+			$(".neko_next").KNResponsiveMenu({
+				// 次の要素を開閉する
+				position : 'next',
+			});
+			$(".neko_prev").KNResponsiveMenu({
+				// 前の要素を開閉する
+				position : 'prev',
+			})
+			$(".neko_child").KNResponsiveMenu({
+				// 子要素を開閉する
+				position : 'children'
+			});
+			$(".neko_label").KNResponsiveMenu({
+				// 次の要素を開閉する＆ラベルを追加する
+				position : 'next',
+				closeLabel : '閉める',
+				openLabel : '開く'
+			});
+			$(".neko_labelImg").KNResponsiveMenu({
+				// 次の要素を開閉する＆イメージを追加する
+				position : 'next',
+				closeLabel : '<img src="close.png">',
+				openLabel : '<img src="open.png">'
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<h1>jquery.KNResponsiveTogglePanel Demo</h1>
+	<p>PCのクリック操作、スマホのタッチ操作、どちらでも快適に動作する開閉メニューを作りたくて自作してみました。JQueryのプラグインとして提供していますのでご自由にご利用ください。</p>
+	
+	<h2>設置方法</h2>
+	<h3>次の要素を開閉する</h3>
+	<div class="button neko_next">click</div>
+	<ul>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+	</ul>
+	
+	<h3>前の要素を開閉する</h3>
+	<ul>
+		<li>bbb</li>
+		<li>bbb</li>
+		<li>bbb</li>
+		<li>bbb</li>
+		<li>bbb</li>
+	</ul>
+	<div class="button neko_prev">click</div>
+	
+	<h3>子要素を開閉する</h3>
+	<div class="button neko_next">click</div>
+	<ul>
+		<li class="neko_child">click
+			<ul>
+				<li><a href="">ddd</a></li>
+				<li><a href="">ddd</a></li>
+				<li><a href="">ddd</a></li>
+				<li><a href="">ddd</a></li>
+				<li><a href="">ddd</a></li>
+			</ul>
+		</li>
+		<li>ccc</li>
+		<li>ccc</li>
+		<li>ccc</li>
+		<li>ccc</li>
+		<li>ccc</li>
+	</ul>
+	
+	<h3>次の要素を開閉する、ボタン要素にテキスト（文字）を設定</h3>
+	<div class="button neko_label"></div>
+	<ul>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+	</ul>
+	
+	<h3>次の要素を開閉する、ボタン要素に画像を設定</h3>
+	<div class="button neko_labelImg"></div>
+	<ul>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+		<li>aaa</li>
+	</ul>
+
+</body>
+</html>

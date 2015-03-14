@@ -1,5 +1,5 @@
 (function($) {
-    $.fn.KNResponsiveMenu = function(options){
+    $.fn.KNResponsiveTogglePanel = function(options){
         
         // setup options
         var defaults = {
@@ -30,7 +30,7 @@
 	        }
         }
         
-        function KNToggleMenu(element, position) {
+        function KNTogglePanel(element, position) {
 			switch (position){
 				case 'next':
 					element.next().slideToggle('fast', updateLabel(element));
@@ -67,11 +67,11 @@
 				endX = 0;
 				endY = 0;
 				
-				KNToggleMenu($(this), setting.position);
+				KNTogglePanel($(this), setting.position);
 			});		
 		} else {
 			$(this).click( function() {
-				KNToggleMenu($(this), setting.position);
+				KNTogglePanel($(this), setting.position);
 			});
 		}
         
