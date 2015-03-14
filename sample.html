@@ -9,25 +9,25 @@
 	<script type="text/javascript" src="jquery.KNResponsiveTogglePanel.min.js"></script>
 	<script>
 		$(function(){
-			$(".neko_next").KNResponsiveMenu({
+			$(".neko_next").KNResponsiveTogglePanel({
 				// 次の要素を開閉する
 				position : 'next',
 			});
-			$(".neko_prev").KNResponsiveMenu({
+			$(".neko_prev").KNResponsiveTogglePanel({
 				// 前の要素を開閉する
 				position : 'prev',
 			})
-			$(".neko_child").KNResponsiveMenu({
+			$(".neko_child").KNResponsiveTogglePanel({
 				// 子要素を開閉する
 				position : 'children'
 			});
-			$(".neko_label").KNResponsiveMenu({
+			$(".neko_label").KNResponsiveTogglePanel({
 				// 次の要素を開閉する＆ラベルを追加する
 				position : 'next',
 				closeLabel : '閉める',
 				openLabel : '開く'
 			});
-			$(".neko_labelImg").KNResponsiveMenu({
+			$(".neko_labelImg").KNResponsiveTogglePanel({
 				// 次の要素を開閉する＆イメージを追加する
 				position : 'next',
 				closeLabel : '<img src="close.png">',
