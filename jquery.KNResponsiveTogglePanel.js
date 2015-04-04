@@ -5,6 +5,7 @@
         var defaults = {
             position : 'next',
             closeLabel : '',
+            closeLabel : '',
             openLabel : ''
         };
         var setting = $.extend(defaults, options);
